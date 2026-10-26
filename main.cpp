@@ -5,15 +5,17 @@ using namespace std;
 
 int main() {
     // Variáveis da conta
-    int numeroConta = 0;
-    string nomeCliente = "";
-    string cpf = "";
-    int tipoConta = 0; // 1 = Corrente, 2 = Poupança
-    double saldo = 0.0;
-    bool contaAtiva = false;
+    int numeroConta = 0;     // Armazena o número da conta
+    string nomeCliente = ""; // Armazena o nome do titular
+    string cpf = "";         // Armazena o CPF do titular 
+    int tipoConta = 0;       // Define o tipo(1 = Corrente, 2 = Poupança)
+    double saldo = 0.0;      // Armazena o saldo atual da conta = desativada)
+    bool contaAtiva = false; // Status da conta (true = ativa, false
     
-    int opcao = 0;
-
+    int opcao = 0;           // Armazena a opção escolhida pelo usuário no menu
+    
+    /*O programa utiliza um loop do-while para exibir o menu repetidamente até
+    que o usuário decida sair (escolhendo a opção 6)*/
     do {
         cout << "\n=================================\n";
         cout << "         BANCO INF101            \n";
@@ -27,6 +29,10 @@ int main() {
         cout << "Escolha uma opcao: ";
         cin >> opcao;
 
+/*O switch-case é uma estrutura de controle de fluxo em C++ (e em várias outras linguagens)
+usada para substituir múltiplos if-else if quando você precisa comparar uma única
+variável contra vários valores constantes possíveis.*/
+        
         switch (opcao) { // switch/case: para controlar o fluxo de operações 
         
             case 1:
@@ -36,12 +42,15 @@ int main() {
                 cin >> numeroConta;
                 if (numeroConta <= 0) {
                     cout << "Numero de conta invalido!\n";
+                    
+/*O break interrompe imediatamente a execução do loop (como while ou for) ou de um
+bloco de controle (switch), fazendo o programa continuar a partir da linha logo após essa estrutura.*/                    
                     break;
                 }
 
                 cin.ignore(); // Limpa o buffer do teclado para ler texto
                 cout << "Digite o nome do cliente: ";
-                getline(cin, nomeCliente);
+                getline(cin, nomeCliente); // lê a linha inteira de texto
 
                 cout << "Digite o CPF: ";
                 getline(cin, cpf);
@@ -117,7 +126,9 @@ int main() {
                 cout << "\nEncerrando o programa... Ate logo!\n";
                 break;
 
-            default:
+            default: /* executado caso o valor da variavel não corresponda
+                a nenhuma das opções dos case anteriores.*/
+                
                 cout << "\nOpcao invalida! Tente novamente.\n";
                 break;
         }
