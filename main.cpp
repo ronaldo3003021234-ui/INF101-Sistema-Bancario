@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
     // 2.1 Dados das contas (Capacidade máxima: 100 contas)
-    const int MAX_CONTAS = 100;
+    const int MAX_CONTAS = 100;      // const: defini um valor fixo que não pode ser alterado
     int numeroConta[MAX_CONTAS];     // Armazena os números das contas
     string nomeCliente[MAX_CONTAS];  // Armazena os nomes dos titulares
     string cpf[MAX_CONTAS];          // Armazena os CPFs dos titulares 
