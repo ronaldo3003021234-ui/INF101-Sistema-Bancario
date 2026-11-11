@@ -45,8 +45,7 @@ int main() {
 usada para substituir múltiplos if-else if quando você precisa comparar uma única
 variável contra vários valores constantes possíveis.*/
         
-        switch (opcao) { // switch/case: para controlar o fluxo de operações 
-        
+        switch (opcao) { // switch-case: para controlar o fluxo de operações, ele direciona para uma das operações.
             case 1: {
                 cout << "\n--- CADASTRAR CONTA ---\n";
                 
@@ -68,6 +67,7 @@ bloco de controle (switch), fazendo o programa continuar a partir da linha logo 
 
                 // Verificar se a conta já existe
                 bool encontrada = false;
+                // bool serve para armazenar duas possiveis situações, se é verdadeiro ou falso.
                 for (int i = 0; i < quantidadeContas; i++) {
                     if (numeroConta[i] == numTemp) {
                         encontrada = true;
