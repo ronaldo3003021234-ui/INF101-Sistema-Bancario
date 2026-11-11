@@ -354,7 +354,7 @@ bloco de controle (switch), fazendo o programa continuar a partir da linha logo 
                 break;
 
             default: /* executado caso o valor da variavel não corresponda
-                a nenhuma das opções dos case anteriores.*/
+                a nenhuma das opções dos cases anteriores.*/
                 
                 cout << "\nOpcao invalida! Tente novamente.\n";
                 break;
